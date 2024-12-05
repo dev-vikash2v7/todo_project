@@ -13,13 +13,10 @@ class ToDoDetailView(generics.RetrieveAPIView):
     queryset = ToDo.objects.all()
     serializer_class = ToDoSerializer
 
-# class ToDoListView(generics.ListAPIView):
-#     queryset = ToDo.objects.all()
-#     serializer_class = ToDoSerializer
+class ToDoListView(generics.ListAPIView):
+    queryset = ToDo.objects.all()
+    serializer_class = ToDoSerializer
 
-class ToDoListView(ListView):
-    model = ToDo
-    template_name = 'todo/todo_list.html'  # Specify your template
 
 class ToDoUpdateView(generics.UpdateAPIView):
     queryset = ToDo.objects.all()
